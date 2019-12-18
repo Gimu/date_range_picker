@@ -1157,11 +1157,13 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
       child: new ButtonBar(
         children: <Widget>[
           new FlatButton(
-            child: new Text(localizations.cancelButtonLabel),
+            splashColor: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.2),
+            child: new Text(localizations.cancelButtonLabel, style: TextStyle(color: Theme.of(context).primaryTextTheme.button.color)),
             onPressed: _handleCancel,
           ),
           new FlatButton(
-            child: new Text(localizations.okButtonLabel),
+            splashColor: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.2),
+            child: new Text(localizations.okButtonLabel, style: TextStyle(color: Theme.of(context).primaryTextTheme.button.color)),
             onPressed: _selectedFirstDate != null && _selectedLastDate != null
                 ? _handleOk
                 : widget.onError == null
