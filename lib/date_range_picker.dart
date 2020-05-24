@@ -1113,6 +1113,9 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
       result.add(_selectedFirstDate);
       if (_selectedLastDate != null) {
         result.add(_selectedLastDate);
+      } else {
+        // Second date not selected, user probably wants a specific day
+        result.add(_selectedFirstDate);
       }
     }
     Navigator.pop(context, result);
