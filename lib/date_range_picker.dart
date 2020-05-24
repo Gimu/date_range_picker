@@ -1167,7 +1167,7 @@ class _DatePickerDialogState extends State<_DatePickerDialog> {
           new FlatButton(
             splashColor: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.2),
             child: new Text(localizations.okButtonLabel, style: TextStyle(color: Theme.of(context).primaryTextTheme.button.color)),
-            onPressed: _selectedFirstDate != null && _selectedLastDate != null
+            onPressed: _selectedFirstDate != null
                 ? _handleOk
                 : widget.onError == null
                     ? null
